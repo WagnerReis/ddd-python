@@ -1,0 +1,22 @@
+# Ignore o ambiente virtual
+.venv/
+
+# Ignore as configurações do PyCharm/IDEA
+.idea/
+
+# Ignore os caches do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore arquivos de log
+*.log
+
+# Ignore arquivos de banco de dados
+*.sqlite3
+
+# Ignore arquivos de configurações de ambiente local
+.env
+
+# Ignore os arquivos gerados pelo Poetry
+poetry.lock
