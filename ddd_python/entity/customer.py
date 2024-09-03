@@ -1,5 +1,8 @@
+from .address import Address
+
+
 class Customer:
-    def __init__(self, customer_id: str, name: str, address: str):
+    def __init__(self, customer_id: str, name: str, address: Address):
         self._id = customer_id
         self._name = name
         self._address = address
@@ -24,3 +27,11 @@ class Customer:
 
     def deactivate(self):
         self._active = False
+
+    @property
+    def address(self) -> Address:
+        return self._address
+
+    @address.setter
+    def address(self, address: Address):
+        self._address = address
