@@ -2,10 +2,10 @@ from .address import Address
 
 
 class Customer:
-    def __init__(self, customer_id: str, name: str, address: Address):
+    def __init__(self, customer_id: str, name: str):
         self._id = customer_id
         self._name = name
-        self._address = address
+        self._address = None
         self._active: bool = True
         self.validate()
 
@@ -35,3 +35,6 @@ class Customer:
     @address.setter
     def address(self, address: Address):
         self._address = address
+
+    def get_id(self) -> str:
+        return self._id
