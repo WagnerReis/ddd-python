@@ -7,18 +7,16 @@ class Address(BaseModel):
     zip: str
     city: str
 
-    @classmethod
     @field_validator('street', 'zip', 'city', mode="before")
     def validate_string_fields(cls, value: str, field):
         if not value or len(value.strip()) == 0:
-            raise ValueError(f'{field.name.capitalize()} cannot be empty')
+            raise ValueError(f'{field.field_name.capitalize()} cannot be empty')
         return value
 
-    @classmethod
     @field_validator('number', mode="before")
     def validate_number(cls, value: int, field):
         if value <= 0:
-            raise ValueError(f'{field.name.capitalize()} must be greater than zero')
+            raise ValueError(f'{field.field_name.capitalize()} must be greater than zero')
         return value
 
     def to_string(self):

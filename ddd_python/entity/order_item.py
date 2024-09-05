@@ -3,3 +3,6 @@ class OrderItem:
         self._id = order_item_id
         self._name = name
         self._price = price
+
+    def get_price(self):
+        return self._price

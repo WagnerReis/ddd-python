@@ -1,4 +1,5 @@
 from typing import List
+import functools
 
 from ddd_python.entity.order_item import OrderItem
 
@@ -8,3 +9,6 @@ class Order:
         self._id = order_id
         self._customer_id = curtomer_id
         self._items = items
+
+    def total(self):
+        return functools.reduce(lambda a, b: a.get_price() + b.get_price(), self._items)

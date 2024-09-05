@@ -13,4 +13,5 @@ item1 = OrderItem("1", "item 1", 10)
 item2 = OrderItem("2", "item 2", 15)
 
 order = Order("1", customer.get_id(), [item1, item2])
+print(order.total())
 

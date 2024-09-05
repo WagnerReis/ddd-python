@@ -16,6 +16,12 @@ class Customer:
         if not self._name:
             raise ValueError("Name is required")
 
+    def get_name(self):
+        return self._name
+
+    def is_active(self):
+        return self._active
+
     def change_name(self, name: str):
         self._name = name
         self.validate()
