@@ -1,29 +1,29 @@
 class Product:
     def __init__(self, product_id, name, price, quantity):
-        self.product_id = product_id
-        self.name = name
-        self.price = price
-        self.quantity = quantity
+        self._product_id = product_id
+        self._name = name
+        self._price = price
+        self._quantity = quantity
         self.validate()
 
     def get_name(self) -> str:
-        return self.name
+        return self._name
 
     def get_price(self) -> float:
-        return self.price
+        return self._price
 
     def change_name(self, name: str):
-        self.name = name
+        self._name = name
         self.validate()
 
     def change_price(self, price: float):
-        self.price = price
+        self._price = price
         self.validate()
 
     def validate(self):
-        if not self.product_id:
+        if not self._product_id:
             raise ValueError("Id is required")
-        if not self.name:
+        if not self._name:
             raise ValueError("Name is required")
-        if self.price < 0:
+        if self._price < 0:
             raise ValueError("Price must be greater than zero")

@@ -9,8 +9,8 @@ address = Address(street="Rua dois", number=2, zip="12345-678", city="São Paulo
 customer.address = address
 customer.activate()
 
-item1 = OrderItem("1", "item 1", 10)
-item2 = OrderItem("2", "item 2", 15)
+item1 = OrderItem("1", "123", "item 1", 10, 1)
+item2 = OrderItem("2", "123", "item 2", 15, 2)
 
 order = Order("1", customer.get_id(), [item1, item2])
 print(order.total())
