@@ -15,6 +15,14 @@ class TestOrderService:
         assert customer.get_reward_points() == 5
         assert order.total() == 10
 
+    def test_should_throw_an_error_when_order_items_is_empty(self):
+        customer = Customer("c1", "customer 1")
+
+        try:
+            OrderService.place_orders(customer, [])
+        except Exception as e:
+            assert str(e) == "At least one item is required"
+
     def test_should_get_total_of_all_orders(self):
         item1 = OrderItem("123", "456", "Item 1", 10, 1)
         item2 = OrderItem("123asd", "456213", "Item 2", 20, 1)

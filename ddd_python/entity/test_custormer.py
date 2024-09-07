@@ -47,3 +47,13 @@ class TestCustomer:
         with pytest.raises(ValueError, match="Address is mandatory to activate a customer"):
             customer = Customer("123", "John")
             customer.activate()
+
+    def test_should_add_reward_points(self):
+        customer = Customer("123", "John")
+        assert customer.get_reward_points() == 0
+
+        customer.add_reward_points(10)
+        assert customer.get_reward_points() == 10
+
+        customer.add_reward_points(10)
+        assert customer.get_reward_points() == 20
