@@ -1,5 +1,6 @@
 from ddd_python.entity.order import Order
 from ddd_python.entity.order_item import OrderItem
+from ddd_python.service.order_service import OrderService
 
 
 class TestOrderService:
@@ -12,5 +13,5 @@ class TestOrderService:
 
         total = OrderService.total([order, order2])
 
-        assert total == 20
+        assert total == 30
 

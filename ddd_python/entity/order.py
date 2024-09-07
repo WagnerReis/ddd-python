@@ -22,4 +22,4 @@ class Order:
             raise ValueError("Order must have at least one item")
 
     def total(self):
-        return functools.reduce(lambda a, b: a.get_order_item_total() + b.get_order_item_total(), self._items)
+        return functools.reduce(lambda a, b: a + b.get_order_item_total(), self._items, 0)
