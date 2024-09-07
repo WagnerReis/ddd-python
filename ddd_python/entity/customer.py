@@ -7,6 +7,7 @@ class Customer:
         self._name = name
         self._address = None
         self._active: bool = True
+        self._reward_points: int = 0
         self.validate()
 
     def validate(self):
@@ -18,6 +19,12 @@ class Customer:
 
     def get_name(self):
         return self._name
+
+    def get_reward_points(self):
+        return self._reward_points
+
+    def add_reward_points(self, points: int):
+        self._reward_points += points
 
     def is_active(self):
         return self._active

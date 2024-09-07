@@ -10,9 +10,10 @@ class TestOrderService:
         customer = Customer("c1", "customer 1")
         item1 = OrderItem("123", "456", "Item 1", 10, 1)
 
-        order = OrderService.place_order(customer, [item1])
+        order = OrderService.place_orders(customer, [item1])
 
         assert customer.get_reward_points() == 5
+        assert order.total() == 10
 
     def test_should_get_total_of_all_orders(self):
         item1 = OrderItem("123", "456", "Item 1", 10, 1)
