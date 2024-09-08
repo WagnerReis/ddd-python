@@ -1,5 +1,5 @@
-from ddd_python.domain.entity import Order
-from ddd_python.domain.entity import OrderItem
+from ddd_python.domain.entity.order import Order
+from ddd_python.domain.entity.order_item import OrderItem
 from ddd_python.domain.entity.customer import Customer
 from ddd_python.domain.service.order_service import OrderService
 
