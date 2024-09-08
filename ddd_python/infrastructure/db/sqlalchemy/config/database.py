@@ -16,9 +16,11 @@ Base = declarative_base()
 
 @pytest.fixture(scope="function")
 def db_session():
+    Base.metadata.create_all(bind=engine)
     # Opens a new database session for testing
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
+        Base.metadata.drop_all(bind=engine)

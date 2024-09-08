@@ -5,6 +5,9 @@ class Product:
         self._price = price
         self.validate()
 
+    def get_id(self):
+        return self._product_id
+
     def get_name(self) -> str:
         return self._name
 
