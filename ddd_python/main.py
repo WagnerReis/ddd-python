@@ -1,8 +1,7 @@
-from ddd_python.domain.entity import Order
+from ddd_python.domain.entity.address import Address
 from ddd_python.domain.entity.customer import Customer
-from ddd_python.domain.entity import Address
-from ddd_python.domain.entity import OrderItem
-
+from ddd_python.domain.entity.order import Order
+from ddd_python.domain.entity.order_item import OrderItem
 
 customer = Customer("123", "Wagner")
 address = Address(street="Rua dois", number=2, zip="12345-678", city="São Paulo")

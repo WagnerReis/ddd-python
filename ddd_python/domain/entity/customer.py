@@ -3,7 +3,7 @@ from .address import Address
 
 class Customer:
     def __init__(self, customer_id: str, name: str):
-        self._id = customer_id
+        self._customer_id = customer_id
         self._name = name
         self._address = None
         self._active: bool = True
@@ -11,7 +11,7 @@ class Customer:
         self.validate()
 
     def validate(self):
-        if not self._id:
+        if not self._customer_id:
             raise ValueError("Id is required")
 
         if not self._name:
@@ -33,6 +33,9 @@ class Customer:
         self._name = name
         self.validate()
 
+    def change_address(self, address: Address):
+        self._address = address
+
     def activate(self):
         if not self._address:
             raise ValueError("Address is mandatory to activate a customer")
@@ -50,4 +53,4 @@ class Customer:
         self._address = address
 
     def get_id(self) -> str:
-        return self._id
+        return self._customer_id
