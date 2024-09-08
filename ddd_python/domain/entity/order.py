@@ -1,7 +1,7 @@
 from typing import List
 import functools
 
-from ddd_python.entity.order_item import OrderItem
+from ddd_python.domain.entity.order_item import OrderItem
 
 
 class Order:

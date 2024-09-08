@@ -1,7 +1,7 @@
-from ddd_python.entity.order import Order
-from ddd_python.entity.customer import Customer
-from ddd_python.entity.address import Address
-from ddd_python.entity.order_item import OrderItem
+from ddd_python.domain.entity import Order
+from ddd_python.domain.entity.customer import Customer
+from ddd_python.domain.entity import Address
+from ddd_python.domain.entity import OrderItem
 
 
 customer = Customer("123", "Wagner")

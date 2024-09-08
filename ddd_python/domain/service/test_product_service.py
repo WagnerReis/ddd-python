@@ -1,5 +1,5 @@
-from ddd_python.entity.product import Product
-from ddd_python.service.product_service import ProductService
+from ddd_python.domain.entity import Product
+from ddd_python.domain.service.product_service import ProductService
 
 
 class TestProductService:

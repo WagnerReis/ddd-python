@@ -1,7 +1,7 @@
 import pytest
 
-from ddd_python.entity.address import Address
-from ddd_python.entity.customer import Customer
+from ddd_python.domain.entity.address import Address
+from ddd_python.domain.entity.customer import Customer
 
 
 class TestCustomer:

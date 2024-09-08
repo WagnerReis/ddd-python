@@ -1,6 +1,6 @@
 import pytest
 from pydantic import ValidationError
-from ddd_python.entity.address import Address
+from ddd_python.domain.entity.address import Address
 
 
 class TestAddress:

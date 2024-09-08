@@ -1,6 +1,6 @@
 from typing import List
 
-from ddd_python.entity.product import Product
+from ddd_python.domain.entity import Product
 
 
 class ProductService:

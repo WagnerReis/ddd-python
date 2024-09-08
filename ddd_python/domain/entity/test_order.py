@@ -1,7 +1,7 @@
 import pytest
 
-from ddd_python.entity.order import Order
-from ddd_python.entity.order_item import OrderItem
+from ddd_python.domain.entity.order import Order
+from ddd_python.domain.entity.order_item import OrderItem
 
 
 class TestOrder:
